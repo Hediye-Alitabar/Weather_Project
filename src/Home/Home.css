@@ -1,0 +1,119 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    background: linear-gradient(
+      167.44deg,
+      #0b7da1 0%,
+      #33aadd 47.38%,
+      #2dc8ea 100%
+    );
+  }
+  
+  .dark-mode {
+    background: linear-gradient(
+      167.44deg,
+      #08244f 0%,
+      #134cb5 47.38%,
+      #0b42ab 100%
+    );
+  }
+
+  .main {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+  
+  #header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 90%;
+    margin: 5% 2%;
+  }
+  
+  .middle {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    /* margin-bottom: 25%; */
+  }
+  
+  #today {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 30%;
+    text-align: center;
+  }
+  
+  .today_icon img {
+    width: 60%;
+    height: 60%;
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.05);
+    width: 60%;
+    border-radius: 16px 0px 0px 0px;
+    opacity: 0px;
+  }
+  
+  .weather-card {
+    border-radius: 5px;
+    padding: 2px;
+    margin: 10px;
+    color: #d8d8d9;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    text-align: center;
+  }
+  
+  .weather-card:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .date-title {
+    width: 80px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .temp {
+    display: flex;
+    justify-content: space-around;
+    width: 180px;
+    text-align: center;
+  }
+  
+  .today_temp{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+  }
+
