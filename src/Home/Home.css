@@ -28,13 +28,10 @@
   }
 
   .main {
-    /* width: 100%;
-    height: 100%;  */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
   }
   
   #header {
@@ -72,7 +69,7 @@
   .container {
     background: rgba(255, 255, 255, 0.05);
     width: 60%;
-    border-radius: 16px 0px 0px 0px;
+    border-radius: 16px;
     opacity: 0px;
   }
   
@@ -112,7 +109,17 @@
   .today_temp{
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    text-align: center;
+    align-items: center;
   }
 
+i{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: "row-reverse";
+}
+
+.container-header{
+  display: flex;
+  flex-direction:row-reverse;
+  margin: 20px;
+}
