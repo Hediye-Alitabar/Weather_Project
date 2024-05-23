@@ -82,6 +82,7 @@ export default function Home() {
   const [todayData, setTodayData] = useState(null);
   const [city, setCity] = useState("تهران");
   const [todayDate, setTodayDate] = useState("");
+  
 
   const loadWeather = async () => {
     try {
@@ -162,13 +163,7 @@ export default function Home() {
             )}
           </div>
           <div className="container">
-            <p className="container-header"
-              // style={{
-              //   display: "flex",
-              //   flexDirection: "row-reverse",
-              //   margin: "20px",
-              // }}
-            >
+            <p className="container-header">
               <i
                 className="far fa-calendar-alt"
               ></i>

@@ -1,125 +1,164 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  body {
-    background: linear-gradient(
-      167.44deg,
-      #0b7da1 0%,
-      #33aadd 47.38%,
-      #2dc8ea 100%
-    );
-  }
-  
-  .dark-mode {
-    background: linear-gradient(
-      167.44deg,
-      #08244f 0%,
-      #134cb5 47.38%,
-      #0b42ab 100%
-    );
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  #header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    align-items: center;
-    width: 90%;
-    margin: 5% 2%;
-  }
-  
-  .middle {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    width: 100%;
-    height: 80%;
-    text-align: center;
-  }
-  
-  #today {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 30%;
-    text-align: center;
-  }
-  
-  .today_icon img {
-    width: 60%;
-    height: 60%;
-  }
-  
-  .container {
-    background: rgba(255, 255, 255, 0.05);
-    width: 60%;
-    border-radius: 16px;
-    opacity: 0px;
-  }
-  
-  .weather-card {
-    border-radius: 7px;
-    padding: 2px;
-    margin: 10px;
-    color: #d8d8d9;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    align-items: center;
-  }
-  
-  .weather-card:not(:last-child) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .date-title {
-    width: 80px;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .icon img {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .temp {
-    display: flex;
-    justify-content: space-around;
-    width: 180px;
-    text-align: center;
-  }
-  
-  .today_temp{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+html,
+body {
+  height: 100%;
+}
 
-i{
+body {
+  background: linear-gradient(
+    167.44deg,
+    #0b7da1 0%,
+    #33aadd 47.38%,
+    #2dc8ea 100%
+  );
+}
+
+.dark-mode {
+  background: linear-gradient(
+    167.44deg,
+    #08244f 0%,
+    #134cb5 47.38%,
+    #0b42ab 100%
+  );
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 90%;
+  margin: 5% 2%;
+}
+
+.middle {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  text-align: center;
+}
+
+#today {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 30%;
+  text-align: center;
+}
+
+.today_icon img {
+  width: 60%;
+  height: 60%;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  width: 60%;
+  border-radius: 16px;
+  opacity: 0px;
+}
+
+.weather-card {
+  border-radius: 7px;
+  padding: 2px;
+  margin: 10px;
+  color: #d8d8d9;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.weather-card:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.date-title {
+  width: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.temp {
+  display: flex;
+  justify-content: space-around;
+  width: 180px;
+  text-align: center;
+}
+
+.today_temp {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+i {
   margin-left: 10px;
   display: flex;
   flex-direction: "row-reverse";
 }
 
-.container-header{
+.container-header {
   display: flex;
-  flex-direction:row-reverse;
+  flex-direction: row-reverse;
   margin: 20px;
+}
+
+@media (max-width: 356px) {
+  #header {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .middle {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #today {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .today_icon img {
+    width: 50%;
+    height: 50%;
+  }
+
+  .temp {
+    gap: 5px;
+    justify-content: space-between;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .weather-card {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .temp {
+    width: 100%;
+  }
 }
