@@ -63,6 +63,7 @@ function toPersianNumber(number) {
   const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
   return number.toString().replace(/\d/g, (d) => persianDigits[d]);
 }
+
 function theme() {
   const hour = new Date().getHours();
   const body = document.body;
@@ -82,7 +83,6 @@ export default function Home() {
   const [todayData, setTodayData] = useState(null);
   const [city, setCity] = useState("تهران");
   const [todayDate, setTodayDate] = useState("");
-  
 
   const loadWeather = async () => {
     try {
@@ -113,14 +113,10 @@ export default function Home() {
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       ></link>
-
       <div className="main">
         <div id="header">
           <span>
-            {city}{" "}
-            <i
-              className="fas fa-map-marker-alt"
-            ></i>
+            {city} <i className="fas fa-map-marker-alt"></i>
           </span>
           {todayDate && (
             <div>
@@ -164,9 +160,7 @@ export default function Home() {
           </div>
           <div className="container">
             <p className="container-header">
-              <i
-                className="far fa-calendar-alt"
-              ></i>
+              <i className="far fa-calendar-alt"></i>
               پیش بینی روزهای آینده
             </p>
             <div id="weather-container">
@@ -200,7 +194,36 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="wavy_lines">
+        <svg viewBox="0 0 1440 220">
+          <path
+            d="M0 75
+                 C 360 25, 720 275, 1080 150
+                 S 1800 25, 1440 125"
+            className="line2"
+          />
+          <path
+            d="M0 125
+                 C 360 75, 720 325, 1080 125
+                 S 1800 75, 1440 125"
+            className="line1"
+          />
+          <path
+            d="M0 175
+                 C 360 225, 700 -80, 1080 100
+                 S 1800 225, 1440 175"
+            className="line3"
+          />
+          <path
+            d="M0 215
+                 C 360 275, 720 -40, 1080 120
+                 S 1800 225, 1440 175"
+            className="line4"
+          />
+        </svg>
       </div>
+      </div>
+     
     </div>
   );
 }
